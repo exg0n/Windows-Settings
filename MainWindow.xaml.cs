@@ -24,5 +24,10 @@ namespace Windows_Settings
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
