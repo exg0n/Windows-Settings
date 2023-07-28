@@ -24,10 +24,45 @@ namespace Windows_Settings
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+        private void btn_delete_click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+        private void btn_recovery_click(object sender, RoutedEventArgs e)
+        {
+          
+        }
+        private void btn_online_install_click(object sender, RoutedEventArgs e)
         {
 
         }
+        private void btn_office_install_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btn_adobe_install_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btn_about_program_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void empty(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    btn_delete.Visibility = Visibility.Collapsed;
+        //}
     }
 }
