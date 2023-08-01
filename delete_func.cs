@@ -8,5 +8,9 @@ namespace Windows_Settings
 {
     internal class delete_func
     {
+        public delete_func()
+        {
+            
+        }
     }
 }

@@ -24,38 +24,42 @@
         <!-- Рамка окна взаимодействия -->
 
         <!-- Кнопки вкладки "удаление" -->
-        <CheckBox Grid.Column="1" Content="Cortana" x:Name="cb_cortana" HorizontalAlignment="Left" Margin="22,75,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Microsoft 365 (Office)" x:Name="cb_microsoft_365_office" HorizontalAlignment="Left" Margin="22,92,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Microsoft Teams" x:Name="cb_microsoft_teams" HorizontalAlignment="Left" Margin="22,109,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Microsoft To Do" x:Name="cb_microsoft_to_do" HorizontalAlignment="Left" Margin="22,126,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="OneDrive" x:Name="cb_onedrive" HorizontalAlignment="Left" Margin="22,143,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Solitaire and Casual Games" x:Name="cb_solitaire_and_casual_games" HorizontalAlignment="Left" Margin="22,160,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Xbox" x:Name="cb_xbox" HorizontalAlignment="Left" Margin="22,177,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Будильник и часы" x:Name="cb_alarm_clock_and_clock" HorizontalAlignment="Left" Margin="22,194,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Быстрая поддержка" x:Name="cb_quick_support" HorizontalAlignment="Left" Margin="22,211,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Записки" x:Name="cb_notes" HorizontalAlignment="Left" Margin="22,228,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Запись голоса" x:Name="cb_voice_recording" HorizontalAlignment="Left" Margin="22,245,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Календарь" x:Name="cb_calendar" HorizontalAlignment="Left" Margin="22,262,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Камера" x:Name="cb_camera" HorizontalAlignment="Left" Margin="22,279,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Карты" x:Name="cb_maps" HorizontalAlignment="Left" Margin="22,296,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Кино и ТВ" x:Name="cb_film_and_tv" HorizontalAlignment="Left" Margin="22,313,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Медиаплеер" x:Name="cb_media_player" HorizontalAlignment="Left" Margin="22,330,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Начало работы" x:Name="cb_beginning_of_work" HorizontalAlignment="Left" Margin="22,347,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Новости" x:Name="cb_news" HorizontalAlignment="Left" Margin="22,364,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Погода" x:Name="cb_weather" HorizontalAlignment="Left" Margin="22,381,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Почта" x:Name="cb_mail" HorizontalAlignment="Left" Margin="213,75,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Редактор видео" x:Name="cb_video_editor" HorizontalAlignment="Left" Margin="213,92,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Связь с телефоном" x:Name="cb_сommunication_with_the_phone" HorizontalAlignment="Left" Margin="213,109,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Советы" x:Name="cb_adviсe" HorizontalAlignment="Left" Margin="213,126,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Техническая поддержка" x:Name="cb_technical_support" HorizontalAlignment="Left" Margin="213,143,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Фотографии" x:Name="cb_photo" HorizontalAlignment="Left" Margin="213,160,0,0" VerticalAlignment="Top"/>
-        <CheckBox Grid.Column="1" Content="Центр отзывов" x:Name="cb_feedback_center" HorizontalAlignment="Left" Margin="213,177,0,0" VerticalAlignment="Top"/>
-
+      
 
         <!-- Прогресс бар -->
         <ProgressBar Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,10,0,0" VerticalAlignment="Top" Width="331"/>
-        <GroupBox Grid.Column="1" Header="GroupBox" Margin="10,48,22,33"/>
-
+        <GroupBox Grid.Column="1" x:Name="gb_programs" Header="Программы" Margin="10,48,22,31">
+            <Grid>
+                <CheckBox Grid.Column="1" Content="Cortana" x:Name="cb_cortana" HorizontalAlignment="Left" Margin="22,0,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Microsoft 365 (Office)" x:Name="cb_microsoft_365_office" HorizontalAlignment="Left" Margin="22,17,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Microsoft Teams" x:Name="cb_microsoft_teams" HorizontalAlignment="Left" Margin="22,34,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Microsoft To Do" x:Name="cb_microsoft_to_do" HorizontalAlignment="Left" Margin="22,51,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="OneDrive" x:Name="cb_onedrive" HorizontalAlignment="Left" Margin="22,68,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Solitaire and Casual Games" x:Name="cb_solitaire_and_casual_games" HorizontalAlignment="Left" Margin="22,85,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Xbox" x:Name="cb_xbox" HorizontalAlignment="Left" Margin="22,102,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Будильник и часы" x:Name="cb_alarm_clock_and_clock" HorizontalAlignment="Left" Margin="22,119,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Быстрая поддержка" x:Name="cb_quick_support" HorizontalAlignment="Left" Margin="22,136,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Записки" x:Name="cb_notes" HorizontalAlignment="Left" Margin="22,153,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Запись голоса" x:Name="cb_voice_recording" HorizontalAlignment="Left" Margin="22,170,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Календарь" x:Name="cb_calendar" HorizontalAlignment="Left" Margin="22,204,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Камера" x:Name="cb_camera" HorizontalAlignment="Left" Margin="22,221,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Карты" x:Name="cb_maps" HorizontalAlignment="Left" Margin="22,238,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Кино и ТВ" x:Name="cb_film_and_tv" HorizontalAlignment="Left" Margin="22,255,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Медиаплеер" x:Name="cb_media_player" HorizontalAlignment="Left" Margin="22,272,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Начало работы" x:Name="cb_beginning_of_work" HorizontalAlignment="Left" Margin="22,289,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Новости" x:Name="cb_news" HorizontalAlignment="Left" Margin="22,306,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Погода" x:Name="cb_weather" HorizontalAlignment="Left" Margin="22,381,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Почта" x:Name="cb_mail" HorizontalAlignment="Left" Margin="213,75,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Редактор видео" x:Name="cb_video_editor" HorizontalAlignment="Left" Margin="213,92,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Связь с телефоном" x:Name="cb_сommunication_with_the_phone" HorizontalAlignment="Left" Margin="213,109,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Советы" x:Name="cb_adviсe" HorizontalAlignment="Left" Margin="213,126,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Техническая поддержка" x:Name="cb_technical_support" HorizontalAlignment="Left" Margin="213,143,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Фотографии" x:Name="cb_photo" HorizontalAlignment="Left" Margin="213,160,0,0" VerticalAlignment="Top"/>
+                <CheckBox Grid.Column="1" Content="Центр отзывов" x:Name="cb_feedback_center" HorizontalAlignment="Left" Margin="213,177,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        
+        
     </Grid>
 
 </Window>
