@@ -63,6 +63,11 @@ namespace Windows_Settings
 
         }
 
+        private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
         //private void Button_Click(object sender, RoutedEventArgs e)
         //{
         //    btn_delete.Visibility = Visibility.Collapsed;
