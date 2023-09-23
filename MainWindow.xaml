@@ -15,12 +15,64 @@
         </Grid.ColumnDefinitions>
         <!-- Кнопки меню -->
 
-        <Button Content="Удаление" x:Name="btn_delete" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,1.953" Width="168" Height="40" Click="btn_delete_click" Cursor="Pen"/>
-        <Button Content="Восстановление" x:Name="btn_recovery" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,1.953" Width="168" Height="40" Click="btn_recovery_click"/>
-        <Button Content="Онлайн установка" x:Name="btn_online_install" HorizontalAlignment="Center" Margin="0,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,1.953" Width="168" Height="40" Click="btn_online_install_click"/>
-        <Button Content="Office" x:Name="btn_office_install" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,1.953" Width="168" Height="40" Click="btn_office_install_click"/>
-        <Button Content="Adobe" x:Name="btn_adobe_install" HorizontalAlignment="Center" Margin="0,222,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,1.953" Width="168" Height="40" Click="btn_adobe_install_click"/>
-        <Button Content="О программе" x:Name="btn_about_program" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,1.953" Width="168" Height="40" Click="btn_about_program_click"/>
+        <Button Content="Удаление" 
+                x:Name="btn_delete" 
+                HorizontalAlignment="Center" 
+                Margin="0,42,0,0" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="0.461,1.953" 
+                Width="168" 
+                Height="40" 
+                Click="btn_delete_click" 
+                Cursor="Pen"/>
+
+        <Button Content="Восстановление" 
+                x:Name="btn_recovery" 
+                HorizontalAlignment="Center" 
+                Margin="0,87,0,0" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="0.461,1.953" 
+                Width="168" 
+                Height="40" 
+                Click="btn_recovery_click"/>
+
+        <Button Content="Онлайн установка" 
+                x:Name="btn_online_install" 
+                HorizontalAlignment="Center" 
+                Margin="0,132,0,0" 
+                VerticalAlignment="Top"
+                RenderTransformOrigin="0.461,1.953" 
+                Width="168" 
+                Height="40" 
+                Click="btn_online_install_click"/>
+
+        <Button Content="Office" 
+                x:Name="btn_office_install" 
+                HorizontalAlignment="Center" 
+                Margin="0,177,0,0" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="0.461,1.953" 
+                Width="168" Height="40" 
+                Click="btn_office_install_click"/>
+
+        <Button Content="Adobe" 
+                x:Name="btn_adobe_install"
+                HorizontalAlignment="Center" 
+                Margin="0,222,0,0"
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="0.461,1.953" 
+                Width="168" 
+                Height="40" 
+                Click="btn_adobe_install_click"/>
+        <Button Content="О программе" 
+                x:Name="btn_about_program" 
+                HorizontalAlignment="Center" 
+                Margin="0,267,0,0" 
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="0.461,1.953" 
+                Width="168" 
+                Height="40" 
+                Click="btn_about_program_click"/>
         <!-- Рамка окна взаимодействия -->
 
         <!-- Кнопки вкладки "удаление" -->
@@ -122,7 +174,7 @@
                         <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                     </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Grid.Column="1" Content="Погода" x:Name="cb_weather" HorizontalAlignment="Left" Margin="260,250,0,0" VerticalAlignment="Top">
+                <CheckBox Content="Погода" x:Name="cb_weather" HorizontalAlignment="Left" Margin="260,274,0,0" VerticalAlignment="Top">
                     <CheckBox.LayoutTransform>
                         <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                     </CheckBox.LayoutTransform>
