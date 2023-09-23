@@ -27,14 +27,11 @@ namespace Windows_Settings
         
         private void btn_delete_click(object sender, RoutedEventArgs e)
         {
-            DELETE_test_btn.Visibility = Visibility.Visible;
-            RECOVERY_test_btn.Visibility = Visibility.Collapsed;
-            cb_adviсe.Visibility = Visibility.Collapsed;
+
         }
         private void btn_recovery_click(object sender, RoutedEventArgs e)
         {
-            DELETE_test_btn.Visibility = Visibility.Collapsed;
-            RECOVERY_test_btn.Visibility = Visibility.Visible;
+
         }
         private void btn_online_install_click(object sender, RoutedEventArgs e)
         {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks
+using System.Threading.Tasks;
 
 namespace Windows_Settings
 {
@@ -14,7 +14,7 @@ namespace Windows_Settings
 
         public cbs_inf()
         {
-            work_window.cb
+
         }
     }
 }
