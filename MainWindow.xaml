@@ -25,7 +25,6 @@
                 Height="40" 
                 Click="btn_delete_click" 
                 Cursor="Pen"/>
-
         <Button Content="Восстановление" 
                 x:Name="btn_recovery" 
                 HorizontalAlignment="Center" 
@@ -35,7 +34,6 @@
                 Width="168" 
                 Height="40" 
                 Click="btn_recovery_click"/>
-
         <Button Content="Онлайн установка" 
                 x:Name="btn_online_install" 
                 HorizontalAlignment="Center" 
@@ -45,7 +43,6 @@
                 Width="168" 
                 Height="40" 
                 Click="btn_online_install_click"/>
-
         <Button Content="Office" 
                 x:Name="btn_office_install" 
                 HorizontalAlignment="Center" 
@@ -54,7 +51,6 @@
                 RenderTransformOrigin="0.461,1.953" 
                 Width="168" Height="40" 
                 Click="btn_office_install_click"/>
-
         <Button Content="Adobe" 
                 x:Name="btn_adobe_install"
                 HorizontalAlignment="Center" 
@@ -75,7 +71,7 @@
                 Click="btn_about_program_click"/>
         
         <!--Рамка окна взаимодействия-->
-        <Frame Grid.Column="1" x:Name="work_frame"/>
+        <Frame Grid.Column="1" x:Name="main_frame"/>
     </Grid>
 
 </Window>

@@ -23,11 +23,11 @@ namespace Windows_Settings
         public MainWindow()
         {
             InitializeComponent();
+
         }
-        
         private void btn_delete_click(object sender, RoutedEventArgs e)
         {
-
+            main_frame.Content = new delete_page();
         }
         private void btn_recovery_click(object sender, RoutedEventArgs e)
         {
