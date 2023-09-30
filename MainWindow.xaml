@@ -79,6 +79,7 @@
 
 
         <!-- Прогресс бар -->
+        <Button>123</Button>
         <GroupBox Grid.Column="1" x:Name="gb_programs" Header="Программы" Margin="10,10,22,10">
             <Grid Height="379">
                 <ProgressBar Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,10,0,0" VerticalAlignment="Top" Width="330"/>
