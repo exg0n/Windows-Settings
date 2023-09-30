@@ -1,16 +1,17 @@
-﻿<Page x:Class="Windows_Settings.delete_page"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Windows_Settings"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="735"
-      Title="delete_page">
-
+﻿<UserControl x:Class="Windows_Settings.delete_page"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Windows_Settings"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="730">
     <Grid Background="yellow">
         <Grid Height="379">
             <ProgressBar Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,10,0,0" VerticalAlignment="Top" Width="330"/>
+
+            <Button Content="Удалить" 
+                    Name="delete_btn" Margin="418,240,202,109" Click="delete_btn_Click"/>
 
             <CheckBox Content="Cortana"
                       Style="{DynamicResource checkbox_style}"
@@ -36,7 +37,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="OneDrive" x:Name="cb_onedrive" HorizontalAlignment="Left" Margin="22,150,0,0" VerticalAlignment="Top" Checked="cb_onedrive_Checked">
+            <CheckBox Grid.Column="1" Content="OneDrive" x:Name="cb_onedrive" HorizontalAlignment="Left" Margin="22,150,0,0" VerticalAlignment="Top" Checked="cb_onedrive_Checked" RenderTransformOrigin="0.675,0.675">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -61,7 +62,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Записки" x:Name="cb_notes" HorizontalAlignment="Left" Margin="22,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,0.675">
+            <CheckBox Grid.Column="1" Content="Записки" x:Name="cb_notes" HorizontalAlignment="Left" Margin="22,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,0.675" Checked="cb_notes_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -72,7 +73,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Календарь" x:Name="cb_calendar" HorizontalAlignment="Left" Margin="260,75,0,0" VerticalAlignment="Top">
+            <CheckBox Grid.Column="1" Content="Календарь" x:Name="cb_calendar" HorizontalAlignment="Left" Margin="260,75,0,0" VerticalAlignment="Top" Checked="cb_calendar_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -87,7 +88,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Кино и ТВ" x:Name="cb_film_and_tv" HorizontalAlignment="Left" Margin="260,150,0,0" VerticalAlignment="Top">
+            <CheckBox Grid.Column="1" Content="Кино и ТВ" x:Name="cb_film_and_tv" HorizontalAlignment="Left" Margin="260,150,0,0" VerticalAlignment="Top" Checked="cb_film_and_tv_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -97,7 +98,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Начало работы" x:Name="cb_beginning_of_work" HorizontalAlignment="Left" Margin="260,200,0,0" VerticalAlignment="Top">
+            <CheckBox Grid.Column="1" Content="Начало работы" x:Name="cb_beginning_of_work" HorizontalAlignment="Left" Margin="260,200,0,0" VerticalAlignment="Top" Checked="cb_beginning_of_work_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -107,7 +108,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Погода" x:Name="cb_weather" HorizontalAlignment="Left" Margin="260,250,0,0" VerticalAlignment="Top">
+            <CheckBox Grid.Column="1" Content="Погода" x:Name="cb_weather" HorizontalAlignment="Left" Margin="260,250,0,0" VerticalAlignment="Top" Checked="cb_weather_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -149,4 +150,4 @@
             </CheckBox>
         </Grid>
     </Grid>
-</Page>
+</UserControl>

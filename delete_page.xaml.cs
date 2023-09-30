@@ -18,7 +18,7 @@ namespace Windows_Settings
     /// <summary>
     /// Логика взаимодействия для delete_page.xaml
     /// </summary>
-    public partial class delete_page : Page
+    public partial class delete_page : UserControl
     {
         public delete_page()
         {
@@ -70,7 +70,17 @@ namespace Windows_Settings
 
         }
 
+        private void cb_notes_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void cb_voice_recording_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cb_calendar_Checked(object sender, RoutedEventArgs e)
         {
 
         }
@@ -85,12 +95,27 @@ namespace Windows_Settings
 
         }
 
+        private void cb_film_and_tv_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void cb_media_player_Checked(object sender, RoutedEventArgs e)
         {
 
         }
 
+        private void cb_beginning_of_work_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void cb_news_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cb_weather_Checked(object sender, RoutedEventArgs e)
         {
 
         }
@@ -128,6 +153,11 @@ namespace Windows_Settings
         private void cb_feedback_center_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var list = (this.Content as Panel).Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
         }
     }
 }

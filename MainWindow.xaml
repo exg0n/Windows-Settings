@@ -11,7 +11,7 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"/> 
-            <ColumnDefinition Width="735*"/> 
+            <ColumnDefinition Width="735"/> 
         </Grid.ColumnDefinitions>
         <!-- Кнопки управления меню -->
 
@@ -71,7 +71,7 @@
                 Click="btn_about_program_click"/>
         
         <!--Рамка окна взаимодействия-->
-        <Frame Grid.Column="1" x:Name="main_frame"/>
+        <Frame Grid.Column="1" x:Name="main_frame" NavigationUIVisibility="Hidden"/>
     </Grid>
 
 </Window>
