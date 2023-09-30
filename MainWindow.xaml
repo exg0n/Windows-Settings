@@ -13,7 +13,7 @@
             <ColumnDefinition Width="210"/> 
             <ColumnDefinition Width="735*"/> 
         </Grid.ColumnDefinitions>
-        <!-- Кнопки меню -->
+        <!-- Кнопки управления меню меню -->
 
         <Button Content="Удаление" 
                 x:Name="btn_delete" 
