@@ -12,7 +12,11 @@
         <Grid Height="379">
             <ProgressBar Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,10,0,0" VerticalAlignment="Top" Width="330"/>
 
-            <CheckBox Grid.Column="1" Content="Cortana" x:Name="cb_cortana" HorizontalAlignment="Left" Margin="22,50,0,0" VerticalAlignment="Top" Checked="cb_cortana_Checked">
+            <CheckBox Content="Cortana"
+                      Style="{DynamicResource checkbox_style}"
+                      x:Name="cb_cortana"
+                      Margin="22,50,0,0"
+                      Checked="cb_cortana_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>

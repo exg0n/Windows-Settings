@@ -31,7 +31,7 @@ namespace Windows_Settings
         }
         private void btn_recovery_click(object sender, RoutedEventArgs e)
         {
-
+            main_frame.Content = new recovery_page();
         }
         private void btn_online_install_click(object sender, RoutedEventArgs e)
         {
