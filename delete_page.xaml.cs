@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Windows_Settings
 {
@@ -155,9 +156,31 @@ namespace Windows_Settings
 
         }
 
+        private StringBuilder change_symbol(string input_name)
+        {
+            StringBuilder str = new StringBuilder(input_name);
+
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                if (str[i] == '_')
+                    str[i] = '.';
+            }
+            return str;
+        }
+
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
             var list = (this.Content as Panel).Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
+
+            ProcessStartInfo start_info = new ProcessStartInfo("powershell.exe");
+            start_info.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(start_info);
+
+            foreach (var checkBox in list)
+            {
+                string command = "Get -AppxPacege *" + change_symbol(checkBox.Name) + "*";
+                start_info.Arguments = command;
+            }
         }
     }
 }

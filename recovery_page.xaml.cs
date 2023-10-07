@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -153,6 +154,37 @@ namespace Windows_Settings
         private void cb_feedback_center_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private StringBuilder change_symbol(string input_name)
+        {
+            StringBuilder str = new StringBuilder(input_name);
+
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                if (str[i] == '_')
+                    str[i] = '.';
+            }
+            return str;
+        }
+
+        private void recovery_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var list = (this.Content as Panel).Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
+
+            ProcessStartInfo start_info = new ProcessStartInfo("powershell.exe");
+            // start_info.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(start_info);
+
+            Console.WriteLine(list);
+
+            foreach (var checkBox in list)
+            {
+                string command = "Add-AppxPackage -register \"C:\\Program Files\\WindowsApps\\*" + change_symbol(checkBox.Name) + "*\\AppxManifest.xml\" -DisableDevelopmentMode";
+                start_info.Arguments = command;
+            }
+
+            
         }
     }
 }

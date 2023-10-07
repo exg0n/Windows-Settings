@@ -15,7 +15,8 @@
 
             <CheckBox Content="Cortana"
                       Style="{DynamicResource checkbox_style}"
-                      x:Name="cb_cortana"
+                      x:Name="Microsoft_549981C3F5F10"
+                      
                       Margin="22,50,0,0"
                       Checked="cb_cortana_Checked">
                 <CheckBox.LayoutTransform>

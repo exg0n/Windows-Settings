@@ -145,6 +145,8 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
+            <Button Content="Восстановить" 
+                x:Name="recovery_btn" Margin="418,240,272,109" Click="recovery_btn_Click"/>
         </Grid>
     </Grid>
 </UserControl>
