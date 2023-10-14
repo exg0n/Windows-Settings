@@ -168,20 +168,39 @@ namespace Windows_Settings
             return str;
         }
 
+        private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+
         private void recovery_btn_Click(object sender, RoutedEventArgs e)
         {
-            var list = (this.Content as Panel).Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
-
-            ProcessStartInfo start_info = new ProcessStartInfo("powershell.exe");
-            // start_info.WindowStyle = ProcessWindowStyle.Hidden;
+            List<CheckBox> list = FindVisualChildren<CheckBox>(this)
+                        .Where(cb => cb.IsChecked == true)
+                        .ToList(); ProcessStartInfo start_info = new ProcessStartInfo("powershell.exe");
+            //start_info.WindowStyle = ProcessWindowStyle.Hidden;
             Process.Start(start_info);
-
-            Console.WriteLine(list);
 
             foreach (var checkBox in list)
             {
-                string command = "Add-AppxPackage -register \"C:\\Program Files\\WindowsApps\\*" + change_symbol(checkBox.Name) + "*\\AppxManifest.xml\" -DisableDevelopmentMode";
+                string command = "Add-AppxPackage -register 'C:\\Program Files\\WindowsApps\\*" + change_symbol(checkBox.Name) + "*\\AppxManifest.xml' -DisableDevelopmentMode";
                 start_info.Arguments = command;
+                Process.Start(start_info);
             }
 
             

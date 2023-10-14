@@ -26,16 +26,8 @@ namespace Windows_Settings
             InitializeComponent();
         }
 
-        private void cb_cortana_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        private void cb_cortana_Checked(object sender, RoutedEventArgs e){}
+        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e){}
         private void cb_microsoft_teams_Checked(object sender, RoutedEventArgs e)
         {
 
@@ -168,18 +160,39 @@ namespace Windows_Settings
             return str;
         }
 
+        private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
-            var list = (this.Content as Panel).Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
-
-            ProcessStartInfo start_info = new ProcessStartInfo("powershell.exe");
-            start_info.WindowStyle = ProcessWindowStyle.Hidden;
+            List<CheckBox> list = FindVisualChildren<CheckBox>(this)
+                        .Where(cb => cb.IsChecked == true)
+                        .ToList(); ProcessStartInfo start_info = new ProcessStartInfo("powershell.exe");
+            //start_info.WindowStyle = ProcessWindowStyle.Hidden;
             Process.Start(start_info);
 
             foreach (var checkBox in list)
             {
-                string command = "Get -AppxPacege *" + change_symbol(checkBox.Name) + "*";
+                string command = "Get-AppxPackage *" + change_symbol(checkBox.Name) + "* | Remove-AppxPackage";
                 start_info.Arguments = command;
+                Process.Start(start_info);
             }
         }
     }

@@ -12,7 +12,7 @@
 
             <CheckBox Content="Cortana"
                       Style="{DynamicResource checkbox_style}"
-                      x:Name="cb_cortana"
+                      x:Name="Microsoft_549981C3F5F10"
                       Margin="22,50,0,0"
                       Checked="cb_cortana_Checked">
                 <CheckBox.LayoutTransform>
@@ -59,7 +59,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Записки" x:Name="cb_notes" HorizontalAlignment="Left" Margin="22,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,0.675" Checked="cb_notes_Checked">
+            <CheckBox Grid.Column="1" Content="Записки" x:Name="Office_OneNote" HorizontalAlignment="Left" Margin="22,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,0.675" Checked="cb_notes_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -120,7 +120,7 @@
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Связь с телефоном" x:Name="cb_сommunication_with_the_phone" HorizontalAlignment="Left" Margin="404,75,0,0" VerticalAlignment="Top" Checked="cb_сommunication_with_the_phone_Checked">
+            <CheckBox Grid.Column="1" Content="Связь с телефоном" x:Name="YourPhone" HorizontalAlignment="Left" Margin="404,75,0,0" VerticalAlignment="Top" Checked="cb_сommunication_with_the_phone_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
