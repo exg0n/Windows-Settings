@@ -65,7 +65,7 @@
                 </CheckBox.LayoutTransform>
             </CheckBox>
 
-            <CheckBox Grid.Column="1" Content="Запись голоса" x:Name="cb_voice_recording" HorizontalAlignment="Left" Margin="260,50,0,0" VerticalAlignment="Top" Checked="cb_voice_recording_Checked">
+            <CheckBox Grid.Column="1" Content="Запись голоса" x:Name="cb_voice_recordin" HorizontalAlignment="Left" Margin="260,50,0,0" VerticalAlignment="Top" Checked="cb_voice_recording_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
