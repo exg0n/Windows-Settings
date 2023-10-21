@@ -25,12 +25,91 @@ namespace Windows_Settings
         {
             InitializeComponent();
         }
+        private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
 
-        private void cb_cortana_Checked(object sender, RoutedEventArgs e){}
-        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e){}
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+        private bool is_all_checked()
+        {
+            int counter = 0;
+            List<CheckBox> list = FindVisualChildren<CheckBox>(this).ToList();
+
+            foreach (var checkBox in list)
+                if (checkBox.IsChecked == true)
+                    counter++;
+
+            if (counter == list.Count() - 1)
+                return true;
+            else
+                return false;
+        }
+
+        private void ReturFalseCheckBox()
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+
+        private void ReturTrueCheckBox()
+        {
+            if (is_all_checked() == true)
+            {
+                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+                foundCheckBox.IsChecked = true;
+            }
+        }
+
+        private void cb_cortana_Checked(object sender, RoutedEventArgs e)
+        {
+            if (is_all_checked() == true)
+            {
+                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+                foundCheckBox.IsChecked = true;
+            }
+        }
+        private void cb_cortana_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+
+        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e)
+        {
+            if (is_all_checked() == true)
+            {
+                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+                foundCheckBox.IsChecked = true;
+            }
+        }
+        private void cb_microsoft_365_office_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+
         private void cb_microsoft_teams_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void cb_microsoft_teams_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
         }
 
         private void cb_microsoft_to_do_Checked(object sender, RoutedEventArgs e)
@@ -160,34 +239,48 @@ namespace Windows_Settings
             return str;
         }
 
-        private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        private void SelectAllChecked(object sender, RoutedEventArgs e)
         {
-            if (depObj != null)
-            {
-                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
-                {
-                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
-                    if (child != null && child is T)
-                    {
-                        yield return (T)child;
-                    }
+            
+        }
 
-                    foreach (T childOfChild in FindVisualChildren<T>(child))
-                    {
-                        yield return childOfChild;
-                    }
-                }
+        private void SelectAllUnchecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SelectAllClick(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+
+            if (foundCheckBox.IsChecked == true)
+            {
+                List<CheckBox> list = FindVisualChildren<CheckBox>(this)
+                         .ToList();
+
+                foreach (var checkBox in list)
+                    checkBox.IsChecked = true;
+            }
+            else if (foundCheckBox.IsChecked == false)
+            {
+                List<CheckBox> list = FindVisualChildren<CheckBox>(this)
+                         .ToList();
+
+                foreach (var checkBox in list)
+                    checkBox.IsChecked = false;
             }
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
+            // сбор всех выделенных чекбоксов в один список
             List<CheckBox> list = FindVisualChildren<CheckBox>(this)
                         .Where(cb => cb.IsChecked == true)
                         .ToList(); ProcessStartInfo start_info = new ProcessStartInfo("powershell.exe");
             //start_info.WindowStyle = ProcessWindowStyle.Hidden;
             Process.Start(start_info);
 
+            // выполнение команд для всех выбранных чекбоксов
             foreach (var checkBox in list)
             {
                 string command = "Get-AppxPackage *" + change_symbol(checkBox.Name) + "* | Remove-AppxPackage";
@@ -195,5 +288,6 @@ namespace Windows_Settings
                 Process.Start(start_info);
             }
         }
+        
     }
 }
