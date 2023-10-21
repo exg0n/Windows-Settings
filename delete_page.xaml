@@ -11,30 +11,70 @@
             <ProgressBar Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,10,0,0" VerticalAlignment="Top" Width="330"/>
 
             <CheckBox Content="Cortana"
-                      Style="{DynamicResource checkbox_style}"
+                      
                       x:Name="Microsoft_549981C3F5F10"
+                      
+                      Style="{DynamicResource checkbox_style}"
                       Margin="22,50,0,0"
-                      Checked="cb_cortana_Checked">
+                      
+                      Checked="cb_cortana_Checked"
+                      Unchecked="cb_cortana_Unchecked">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Microsoft 365 (Office)" x:Name="cb_microsoft_365_office" HorizontalAlignment="Left" Margin="22,75,0,0" VerticalAlignment="Top" Checked="cb_microsoft_365_office_Checked">
+            
+            <CheckBox Content="Microsoft 365 (Office)" 
+                      
+                      x:Name="cb_microsoft_365_office"
+                      
+                      Style="{DynamicResource checkbox_style}"
+                      Margin="22,75,0,0"
+
+                      Checked="cb_microsoft_365_office_Checked"
+                      Unchecked="cb_microsoft_365_office_Unchecked">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.3" ScaleY="1.3" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Microsoft Teams" x:Name="cb_microsoft_teams" HorizontalAlignment="Left" Margin="22,100,0,0" VerticalAlignment="Top" Checked="cb_microsoft_teams_Checked">
+
+            <CheckBox Content="Microsoft Teams"
+                      
+                      x:Name="cb_microsoft_teams"
+                      
+                      Style="{DynamicResource checkbox_style}"
+                      Margin="22,100,0,0"
+                      
+                      Checked="cb_microsoft_teams_Checked"
+                      Unchecked="cb_microsoft_teams_Unchecked">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Microsoft To Do" x:Name="cb_microsoft_to_do" HorizontalAlignment="Left" Margin="22,125,0,0" VerticalAlignment="Top" Checked="cb_microsoft_to_do_Checked">
+            
+            <CheckBox Content="Microsoft To Do"
+                      x:Name="cb_microsoft_to_do"
+                      HorizontalAlignment="Left"
+                      Margin="22,125,0,0"
+                      VerticalAlignment="Top"
+                      Checked="cb_microsoft_to_do_Checked">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="OneDrive" x:Name="cb_onedrive" HorizontalAlignment="Left" Margin="22,150,0,0" VerticalAlignment="Top" Checked="cb_onedrive_Checked" RenderTransformOrigin="0.675,0.675">
+            
+            <CheckBox Content="OneDrive"
+                      
+                      x:Name="cb_onedrive"
+                      
+                      Margin="22,150,0,0"
+                      
+                      Checked="cb_onedrive_Checked"
+                      Unchecked="cb_onedrive_Unchecked">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -147,6 +187,21 @@
             </CheckBox>
             <Button Content="Удалить" 
                 x:Name="delete_btn" Margin="418,240,272,109" Click="delete_btn_Click"/>
+            <CheckBox Content="Выделить все"
+                      x:Name="select_all"
+                      HorizontalAlignment="Left"
+                      Margin="571,210,0,0"
+                      VerticalAlignment="Top"
+                      RenderTransformOrigin="0.675,0.675"
+                      
+                      Click="SelectAllClick"
+                      
+                      Checked="SelectAllChecked"
+                      Unchecked="SelectAllUnchecked">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
         </Grid>
     </Grid>
 </UserControl>
