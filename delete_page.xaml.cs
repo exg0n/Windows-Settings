@@ -71,6 +71,11 @@ namespace Windows_Settings
             if (is_all_checked() == true)
                 SelectAllCB.IsChecked = true;
         }
+        private void cb_microsoft_teams_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
 
         private void cb_cortana_Checked(object sender, RoutedEventArgs e){ ReturnCBTrue(); }
         private void cb_cortana_Unchecked(object sender, RoutedEventArgs e){ ReturnCBFalse(); }
