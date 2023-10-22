@@ -14,11 +14,12 @@
                       
                       x:Name="Microsoft_549981C3F5F10"
                       
-                      Style="{DynamicResource checkbox_style}"
                       Margin="22,50,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
                       
-                      Checked="cb_cortana_Checked"
-                      Unchecked="cb_cortana_Unchecked">
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
 
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
@@ -33,8 +34,8 @@
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
 
-                      Checked="cb_microsoft_365_office_Checked"
-                      Unchecked="cb_microsoft_365_office_Unchecked">
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
 
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.3" ScaleY="1.3" />
@@ -49,8 +50,8 @@
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
                       
-                      Checked="cb_microsoft_teams_Checked"
-                      Unchecked="cb_microsoft_teams_Unchecked" Width="148">
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
 
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
@@ -65,8 +66,9 @@
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
                       
-                      Checked="cb_microsoft_to_do_Checked"
-                      Unchecked="">
+                     Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
@@ -80,8 +82,8 @@
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
                       
-                      Checked="cb_onedrive_Checked"
-                      Unchecked="cb_onedrive_Unchecked">
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
 
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
@@ -89,14 +91,14 @@
             </CheckBox>
             <CheckBox Content="Solitaire and Casual Games" 
                       
-                      x:Name="cb_solitaire_and_casual_games"
+                      x:Name="MicrosoftSolitaireCollection"
                       
                       Margin="22,175,0,0"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
                       
-                      Checked="cb_solitaire_and_casual_games_Checked"
-                      Unchecked="cb_solitaire_and_casual_games_Unchecked">
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
                 
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
@@ -104,128 +106,340 @@
             </CheckBox>
             <CheckBox Content="Xbox" 
                       
-                      x:Name="cb_xbox" 
+                      x:Name="XboxApp" 
                       
                       Margin="22,200,0,0" 
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
                       
-                      Checked="cb_xbox_Checked"
-                      Unchecked="cb_xbox_Unchecked">
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
                 
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Будильник и часы" x:Name="cb_alarm_clock_and_clock" HorizontalAlignment="Left" Margin="22,225,0,0" VerticalAlignment="Top" Checked="cb_alarm_clock_and_clock_Checked">
+            
+            <CheckBox Content="Будильник и часы" 
+                      
+                      x:Name="windowsalarms" 
+                      
+                      Margin="22,225,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Быстрая поддержка" x:Name="cb_quick_support" HorizontalAlignment="Left" Margin="22,250,0,0" VerticalAlignment="Top" Checked="cb_quick_support_Checked">
+            
+            <CheckBox Content="Быстрая поддержка"
+                      
+                      x:Name="cb_quick_support"
+                      
+                      Margin="22,250,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Записки" x:Name="Office_OneNote" HorizontalAlignment="Left" Margin="22,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,0.675" Checked="cb_notes_Checked">
+            
+            <CheckBox Content="Записки"
+                      
+                      x:Name="MicrosoftStickyNotes"
+                      
+                      Margin="22,275,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
 
-            <CheckBox Grid.Column="1" Content="Запись голоса" x:Name="cb_voice_recording" HorizontalAlignment="Left" Margin="260,50,0,0" VerticalAlignment="Top" Checked="cb_voice_recording_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Календарь" x:Name="cb_calendar" HorizontalAlignment="Left" Margin="260,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,0.675" Checked="cb_calendar_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Камера" x:Name="cb_camera" HorizontalAlignment="Left" Margin="260,100,0,0" VerticalAlignment="Top" Checked="cb_camera_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Карты" x:Name="cb_maps" HorizontalAlignment="Left" Margin="260,125,0,0" VerticalAlignment="Top" Checked="cb_maps_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Кино и ТВ" x:Name="cb_film_and_tv" HorizontalAlignment="Left" Margin="260,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,0.675" Checked="cb_film_and_tv_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Медиаплеер" x:Name="cb_media_player" HorizontalAlignment="Left" Margin="260,175,0,0" VerticalAlignment="Top" Checked="cb_media_player_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Начало работы" x:Name="cb_beginning_of_work" HorizontalAlignment="Left" Margin="260,200,0,0" VerticalAlignment="Top" Checked="cb_beginning_of_work_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Новости" x:Name="cb_news" HorizontalAlignment="Left" Margin="260,225,0,0" VerticalAlignment="Top" Checked="cb_news_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Погода" x:Name="cb_weather" HorizontalAlignment="Left" Margin="260,250,0,0" VerticalAlignment="Top" Checked="cb_weather_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Почта" x:Name="cb_mail" HorizontalAlignment="Left" Margin="260,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2,0" Checked="cb_mail_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Редактор видео" x:Name="cb_video_editor" HorizontalAlignment="Left" Margin="404,50,0,0" VerticalAlignment="Top" Checked="cb_video_editor_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Связь с телефоном" x:Name="YourPhone" HorizontalAlignment="Left" Margin="404,75,0,0" VerticalAlignment="Top" Checked="cb_сommunication_with_the_phone_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Советы" x:Name="cb_adviсe" HorizontalAlignment="Left" Margin="404,100,0,0" VerticalAlignment="Top" Checked="cb_adviсe_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Техническая поддержка" x:Name="cb_technical_support" HorizontalAlignment="Left" Margin="404,125,0,0" VerticalAlignment="Top" Checked="cb_technical_support_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Фотографии" x:Name="cb_photo" HorizontalAlignment="Left" Margin="404,150,0,0" VerticalAlignment="Top" Checked="cb_photo_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Центр отзывов" x:Name="cb_feedback_center" HorizontalAlignment="Left" Margin="404,175,0,0" VerticalAlignment="Top" Checked="cb_feedback_center_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <Button Content="Удалить" 
-                x:Name="delete_btn" Margin="418,240,272,109" Click="delete_btn_Click"/>
-            <CheckBox Content="Выделить все"
-                      x:Name="select_all"
+            <CheckBox Content="Запись голоса"
+                      
+                      x:Name="WindowsSoundRecorder"
+                      
+                      Margin="260,50,0,0"
                       HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Календарь"
+                      
+                      x:Name="cb_calendar"
+                      
+                      Margin="260,75,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Камера"
+                      
+                      x:Name="WindowsCamera"
+                      
+                      Margin="260,100,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Карты"
+                      
+                      x:Name="windowsmaps"
+                      
+                      Margin="260,125,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Кино и ТВ"
+                      
+                      x:Name="ZuneVideo"
+                      
+                      Margin="260,150,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Медиаплеер"
+                      
+                      x:Name="cb_media_player"
+                      
+                      HorizontalAlignment="Left"
+                      Margin="260,175,0,0"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Начало работы"
+                      
+                      x:Name="cb_beginning_of_work"
+                      
+                      Margin="260,200,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Новости"
+                      
+                      x:Name="cb_news"
+                      
+                      Margin="260,225,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Погода"
+                      
+                      x:Name="bingweather"
+                      
+                      Margin="260,250,0,0"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Почта"
+                      x:Name="windowscommunicationsapps"
+                      
+                      Margin="260,275,0,0"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Редактор видео"
+                      
+                      x:Name="cb_video_editor"
+                      
+                      Margin="404,50,0,0"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Связь с телефоном"
+                      
+                      x:Name="YourPhone"
+                      
+                      Margin="404,75,0,0"
+                      VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Советы"
+                      
+                      x:Name="GetStarted"
+                      
+                      HorizontalAlignment="Left"
+                      Margin="404,100,0,0"
+                      VerticalAlignment="Top"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Техническая поддержка"
+                      
+                      x:Name="GetHelp"
+                      
+                      Margin="404,125,0,0"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Фотографии"
+                      
+                      x:Name="cb_photo"
+
+                      Margin="404,150,0,0"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <CheckBox Content="Центр отзывов"
+                      
+                      x:Name="cb_feedback_center"
+                      
+                      Margin="404,175,0,0"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      
+                      Checked="ReturnCBTrue"
+                      Unchecked="ReturnCBFalse">
+                
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            
+            <Button Content="Удалить"
+                    
+                    x:Name="delete_btn" 
+                    
+                    Margin="418,240,272,109"
+                    Click="delete_btn_Click"/>
+            
+            <CheckBox Content="Выделить все"
+                      
+                      x:Name="select_all"
+                      
                       Margin="571,210,0,0"
                       VerticalAlignment="Top"
-                      RenderTransformOrigin="0.675,0.675"
+                      HorizontalAlignment="Left"
                       
-                      Click="SelectAllClick"
-                      
-                      Checked="SelectAllChecked"
-                      Unchecked="SelectAllUnchecked">
+                      Click="SelectAllClick">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>

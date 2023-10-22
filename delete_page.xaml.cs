@@ -61,145 +61,15 @@ namespace Windows_Settings
                 return false;
         }
 
-        private void ReturnCBFalse()
+        private void ReturnCBFalse(object sender, RoutedEventArgs e)
         {
             SelectAllCB.IsChecked = false;
         }
 
-        private void ReturnCBTrue()
+        private void ReturnCBTrue(object sender, RoutedEventArgs e)
         {
             if (is_all_checked() == true)
                 SelectAllCB.IsChecked = true;
-        }
-
-        private void cb_cortana_Checked(object sender, RoutedEventArgs e){ ReturnCBTrue(); }
-        private void cb_cortana_Unchecked(object sender, RoutedEventArgs e){ ReturnCBFalse(); }
-
-        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e) { ReturnCBTrue(); }
-        private void cb_microsoft_365_office_Unchecked(object sender, RoutedEventArgs e) { ReturnCBFalse(); }
-        
-
-        private void cb_microsoft_teams_Checked(object sender, RoutedEventArgs e) { ReturnCBTrue(); }
-        private void cb_microsoft_teams_Unchecked(object sender, RoutedEventArgs e) { ReturnCBFalse(); }
-
-        private void cb_microsoft_to_do_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_onedrive_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_onedrive_Unchecked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_solitaire_and_casual_games_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_xbox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_alarm_clock_and_clock_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_quick_support_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_notes_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_voice_recording_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_calendar_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_camera_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_maps_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_film_and_tv_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_media_player_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_beginning_of_work_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_news_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_weather_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_mail_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_video_editor_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_сommunication_with_the_phone_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_adviсe_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_technical_support_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_photo_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_feedback_center_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private StringBuilder change_symbol(string input_name)
@@ -214,16 +84,7 @@ namespace Windows_Settings
             return str;
         }
 
-        private void SelectAllChecked(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void SelectAllUnchecked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+     
         private void SelectAllClick(object sender, RoutedEventArgs e)
         {
             CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
@@ -263,6 +124,5 @@ namespace Windows_Settings
                 Process.Start(start_info);
             }
         }
-        
     }
 }
