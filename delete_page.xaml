@@ -19,22 +19,23 @@
                       
                       Checked="cb_cortana_Checked"
                       Unchecked="cb_cortana_Unchecked">
-                
+
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            
+
             <CheckBox Content="Microsoft 365 (Office)" 
                       
                       x:Name="cb_microsoft_365_office"
                       
-                      Style="{DynamicResource checkbox_style}"
                       Margin="22,75,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
 
                       Checked="cb_microsoft_365_office_Checked"
                       Unchecked="cb_microsoft_365_office_Unchecked">
-                
+
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.3" ScaleY="1.3" />
                 </CheckBox.LayoutTransform>
@@ -44,47 +45,74 @@
                       
                       x:Name="cb_microsoft_teams"
                       
-                      Style="{DynamicResource checkbox_style}"
-                      Margin="22,100,0,0"
+                      Margin="22,100,0,207"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
                       
                       Checked="cb_microsoft_teams_Checked"
-                      Unchecked="cb_microsoft_teams_Unchecked">
-                
+                      Unchecked="cb_microsoft_teams_Unchecked" Width="148">
+
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            
+
             <CheckBox Content="Microsoft To Do"
+                      
                       x:Name="cb_microsoft_to_do"
-                      HorizontalAlignment="Left"
+                      
                       Margin="22,125,0,0"
+                      HorizontalAlignment="Left"
                       VerticalAlignment="Top"
-                      Checked="cb_microsoft_to_do_Checked">
+                      
+                      Checked="cb_microsoft_to_do_Checked"
+                      Unchecked="">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            
+
             <CheckBox Content="OneDrive"
                       
                       x:Name="cb_onedrive"
                       
-                      Margin="22,150,0,0"
+                      Margin="22,150,604,207"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
                       
                       Checked="cb_onedrive_Checked"
                       Unchecked="cb_onedrive_Unchecked">
+
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <CheckBox Content="Solitaire and Casual Games" 
+                      
+                      x:Name="cb_solitaire_and_casual_games"
+                      
+                      Margin="22,175,0,0"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="cb_solitaire_and_casual_games_Checked"
+                      Unchecked="cb_solitaire_and_casual_games_Unchecked">
                 
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>
             </CheckBox>
-            <CheckBox Grid.Column="1" Content="Solitaire and Casual Games" x:Name="cb_solitaire_and_casual_games" HorizontalAlignment="Left" Margin="22,175,0,0" VerticalAlignment="Top" Checked="cb_solitaire_and_casual_games_Checked">
-                <CheckBox.LayoutTransform>
-                    <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
-                </CheckBox.LayoutTransform>
-            </CheckBox>
-            <CheckBox Grid.Column="1" Content="Xbox" x:Name="cb_xbox" HorizontalAlignment="Left" Margin="22,200,0,0" VerticalAlignment="Top" Checked="cb_xbox_Checked">
+            <CheckBox Content="Xbox" 
+                      
+                      x:Name="cb_xbox" 
+                      
+                      Margin="22,200,0,0" 
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      
+                      Checked="cb_xbox_Checked"
+                      Unchecked="cb_xbox_Unchecked">
+                
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="1.35" ScaleY="1.35" />
                 </CheckBox.LayoutTransform>

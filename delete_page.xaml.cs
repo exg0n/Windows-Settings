@@ -19,12 +19,13 @@ namespace Windows_Settings
     public partial class delete_page : UserControl
     {
         // чекбокс "выделить все"
-       
+        private CheckBox SelectAllCB;
+
 
         public delete_page()
         {
             InitializeComponent();
-            
+            SelectAllCB = (CheckBox)this.FindName("select_all");
         }
         private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
@@ -62,45 +63,24 @@ namespace Windows_Settings
 
         private void ReturnCBFalse()
         {
-            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
-            foundCheckBox.IsChecked = false;
+            SelectAllCB.IsChecked = false;
         }
 
         private void ReturnCBTrue()
         {
             if (is_all_checked() == true)
-            {
-                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
-                foundCheckBox.IsChecked = true;
-            }
+                SelectAllCB.IsChecked = true;
         }
 
         private void cb_cortana_Checked(object sender, RoutedEventArgs e){ ReturnCBTrue(); }
         private void cb_cortana_Unchecked(object sender, RoutedEventArgs e){ ReturnCBFalse(); }
 
-        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e)
-        {
-            if (is_all_checked() == true)
-            {
-                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
-                foundCheckBox.IsChecked = true;
-            }
-        }
-        private void cb_microsoft_365_office_Unchecked(object sender, RoutedEventArgs e)
-        {
-            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
-            foundCheckBox.IsChecked = false;
-        }
+        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e) { ReturnCBTrue(); }
+        private void cb_microsoft_365_office_Unchecked(object sender, RoutedEventArgs e) { ReturnCBFalse(); }
+        
 
-        private void cb_microsoft_teams_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void cb_microsoft_teams_Unchecked(object sender, RoutedEventArgs e)
-        {
-            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
-            foundCheckBox.IsChecked = false;
-        }
+        private void cb_microsoft_teams_Checked(object sender, RoutedEventArgs e) { ReturnCBTrue(); }
+        private void cb_microsoft_teams_Unchecked(object sender, RoutedEventArgs e) { ReturnCBFalse(); }
 
         private void cb_microsoft_to_do_Checked(object sender, RoutedEventArgs e)
         {
