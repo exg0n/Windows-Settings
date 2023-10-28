@@ -15,6 +15,7 @@
                       x:Name="Microsoft_549981C3F5F10"
                       
                       Margin="22,50,0,0"
+
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
                       
@@ -66,7 +67,7 @@
                       HorizontalAlignment="Left"
                       VerticalAlignment="Top"
                       
-                     Checked="ReturnCBTrue"
+                      Checked="ReturnCBTrue"
                       Unchecked="ReturnCBFalse">
                 
                 <CheckBox.LayoutTransform>
@@ -407,9 +408,9 @@
                 </CheckBox.LayoutTransform>
             </CheckBox>
             
-            <CheckBox Content="Центр отзывов"
+            <CheckBox Content="Центр  отзывов"
                       
-                      x:Name="cb_feedback_center"
+                      x:Name="cb_feedback_center" 
                       
                       Margin="404,175,0,0"
                       VerticalAlignment="Top"
