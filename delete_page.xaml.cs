@@ -74,6 +74,154 @@ namespace Windows_Settings
 
         private void ReturnCBFalse(object sender, RoutedEventArgs e)
         {
+
+        private void cb_cortana_Checked(object sender, RoutedEventArgs e)
+        {
+            if (is_all_checked() == true)
+            {
+                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+                foundCheckBox.IsChecked = true;
+            }
+        }
+        private void cb_cortana_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+
+        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e)
+        {
+            if (is_all_checked() == true)
+            {
+                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+                foundCheckBox.IsChecked = true;
+            }
+        }
+        private void cb_microsoft_365_office_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+
+        private void cb_microsoft_teams_Checked(object sender, RoutedEventArgs e)
+=========
+>>>>>>>>> Temporary merge branch 2
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+<<<<<<<<< Temporary merge branch 1
+        private void cb_microsoft_teams_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+=========
+        private bool is_all_checked()
+        {
+            int counter = 0;
+            List<CheckBox> list = FindVisualChildren<CheckBox>(this).ToList();
+
+            foreach (var checkBox in list)
+                if (checkBox.IsChecked == true)
+                    counter++;
+
+            if (counter == list.Count() - 1)
+                return true;
+            else
+                return false;
+        }
+
+        private void ReturnCBFalse()
+        {
+
+        private void cb_cortana_Checked(object sender, RoutedEventArgs e)
+        {
+            if (is_all_checked() == true)
+            {
+                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+                foundCheckBox.IsChecked = true;
+            }
+        }
+        private void cb_cortana_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+
+        private void cb_microsoft_365_office_Checked(object sender, RoutedEventArgs e)
+        {
+            if (is_all_checked() == true)
+            {
+                CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+                foundCheckBox.IsChecked = true;
+            }
+        }
+        private void cb_microsoft_365_office_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+
+        private void cb_microsoft_teams_Checked(object sender, RoutedEventArgs e)
+=========
+>>>>>>>>> Temporary merge branch 2
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+<<<<<<<<< Temporary merge branch 1
+        private void cb_microsoft_teams_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox foundCheckBox = (CheckBox)this.FindName("select_all");
+            foundCheckBox.IsChecked = false;
+        }
+=========
+        private bool is_all_checked()
+        {
+            int counter = 0;
+            List<CheckBox> list = FindVisualChildren<CheckBox>(this).ToList();
+
+            foreach (var checkBox in list)
+                if (checkBox.IsChecked == true)
+                    counter++;
+
+            if (counter == list.Count() - 1)
+                return true;
+            else
+                return false;
+        }
+
+        private void ReturnCBFalse()
+        {
             SelectAllCB.IsChecked = false;
         }
 
